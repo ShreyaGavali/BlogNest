@@ -1,0 +1,39 @@
+body{
+    font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.blognest{
+    margin-left: 10rem;
+}
+
+.navbar-brand{
+    margin-top: 0.2rem !important;
+}
+
+.navbar-nav{
+    margin-right: 10rem;
+}
+
+.navbar-nav a{
+    margin-right: 2rem;
+}
+
+
+@media screen and (max-width: 768px){
+    .blognest{
+        margin-left: 0rem;
+    } 
+    .navbar-brand{
+        margin-top: 0rem !important;
+    }
+    
+    .navbar-nav{
+        margin-right: 0rem;
+    }
+    
+    .navbar-nav a{
+        margin-right: 0rem;
+    }
+}

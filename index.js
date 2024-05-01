@@ -9,11 +9,18 @@ import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 import { errorHandeler } from "./middleware/errorMiddleware.js";
 import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
 
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "dist")));
+app.use(express.static(path.join(__dirname, '/frontend/dist')));
+
+
 
 // app.use(express.json());
 dotenv.config()
@@ -27,6 +34,8 @@ const dbUrl = process.env.ATLASDB_URL;
 app.use("/blogs/auth", authRoute);
 app.use("/blogs/post", blogRoute);
 app.use("/blogs/comment", commentRoute);
+
+app.use('*', (req, res) => res.sendFile(path.join(__dirname, '/frontend/dist/index.html')))
 
 
 app.use(errorHandeler)

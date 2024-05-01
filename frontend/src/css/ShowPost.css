@@ -1,0 +1,35 @@
+.oneBlog{
+    /* border: 2px solid black; */
+    margin: 2rem;
+    width: 80%;
+    margin: auto;
+}
+
+  
+.oneBlog img{
+    width: 80% ;
+    height: 20rem;
+    /* margin: 1rem; */
+    border-radius: 1rem;
+    
+}
+
+.author{
+    text-align: right;
+    margin-top: 4rem;
+}
+
+.image{
+    width:100%;
+    /* border: 2px solid black; */
+}
+
+
+@media screen and (max-width: 425px){
+    .oneBlog img{
+        height: 16rem;
+        width: 100%;
+    }
+} 
+
+

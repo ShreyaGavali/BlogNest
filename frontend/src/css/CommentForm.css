@@ -1,0 +1,18 @@
+.comments h2{
+    text-align: center;
+}
+
+.comments button{
+    border: none !important;
+    border-radius: 1rem !important;
+    background-color: rgb(224, 222, 222);
+    color: black;
+    margin-top: 2rem;
+}
+
+.comments button:hover{
+    background-color: black;
+    color: white;
+}
+
+
