@@ -8,7 +8,7 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 import { errorHandeler } from "./middleware/errorMiddleware.js";
-import path from ("path");
+import path from "path";
 
 
 const app = express();
