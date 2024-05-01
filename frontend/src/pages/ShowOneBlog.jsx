@@ -32,7 +32,7 @@ const ShowOneBlog = () => {
 
   const handelDeletePost = () => {
     axios
-      .delete(`http://localhost:8080/blogs/post/${id}`, config)
+      .delete(`/blogs/post/${id}`, config)
       .then(() => {
         navigate('/');
         notifySuccess();
