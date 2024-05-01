@@ -1,4 +1,4 @@
-import { Comment } from "../models/CommentModel.js";
+import { Comment } from "../models/commentModel.js";
 // import asyncHandler from 'express-async-handler';
 
 // Create comment
