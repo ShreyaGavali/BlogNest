@@ -25,7 +25,7 @@ const CommentForm = ({ postId }) => {
         }
 
         try {
-            const response = await axios.post('http://localhost:8080/blogs/comment/', {
+            const response = await axios.post('/blogs/comment/', {
                 postId,
                 author,
                 content

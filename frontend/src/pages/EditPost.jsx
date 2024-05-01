@@ -12,7 +12,7 @@ const EditPost = () => {
   const {id} = useParams();
 
   useEffect(() => {
-    axios.get(`http://localhost:8080/blogs/post/one/${id}`)
+    axios.get(`/blogs/post/one/${id}`)
     .then((response) => {
       setTitle(response.data.title);
       setCategory(response.data.category);
@@ -39,7 +39,7 @@ const EditPost = () => {
       }
     }
     axios
-      .put(`http://localhost:8080/blogs/post/${id}`, data, config)
+      .put(`/blogs/post/${id}`, data, config)
       navigate('/');
       notifySuccess()
       // .then(() => {

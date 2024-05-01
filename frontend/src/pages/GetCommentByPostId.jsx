@@ -13,7 +13,7 @@ const CommentList = ({ postId }) => {
     useEffect(() => {
         const fetchComments = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/blogs/comment/${postId}`);
+                const response = await axios.get(`/blogs/comment/${postId}`);
                 // console.log(response);
                 setComments(response.data);
                 // console.log(comments)
@@ -27,7 +27,7 @@ const CommentList = ({ postId }) => {
 
     const handleDeleteComment = (commentId) => {
         // Delete comment from backend API
-        axios.delete(`http://localhost:8080/blogs/comment/${commentId}`)
+        axios.delete(`/blogs/comment/${commentId}`)
             .then(response => {
                 // Remove the deleted comment from the state
                 setComments(comments.filter(comment => comment._id !== commentId));

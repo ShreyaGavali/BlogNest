@@ -54,7 +54,7 @@ const AddPost = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:8080/blogs/post/", post, config, name)
+      const res = await axios.post("/blogs/post/", post, config, name)
       navigate('/');
       notifySuccess();
     } catch (err) {

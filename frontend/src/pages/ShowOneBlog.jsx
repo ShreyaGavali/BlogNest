@@ -21,7 +21,7 @@ const ShowOneBlog = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/blogs/post/one/${id}`)
+      .get(`/blogs/post/one/${id}`)
       .then((response) => {
         setBlog(response.data);
       })

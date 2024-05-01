@@ -16,7 +16,7 @@ const ShowPost = () => {
 
   useEffect(() => {
     axios
-     .get('http://localhost:8080/blogs/post/all')
+     .get('/blogs/post/all')
      .then((response) => {
       setBlogs(response.data);
      })

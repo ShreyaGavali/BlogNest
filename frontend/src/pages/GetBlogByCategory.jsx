@@ -9,7 +9,7 @@ const GetBlogByCategory = ({category}) => {
 
   useEffect(() => {
     axios
-     .get(`http://localhost:8080/blogs/post/${category}`)
+     .get(`/blogs/post/${category}`)
      .then((response) => {
       setBlogs(response.data);
      })

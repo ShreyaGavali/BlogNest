@@ -16,7 +16,7 @@ export default function UserBlog() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8080/blogs/post/', config)
+      .get('/blogs/post/', config)
       .then((response) => {
         setBlogs(response.data);
       })

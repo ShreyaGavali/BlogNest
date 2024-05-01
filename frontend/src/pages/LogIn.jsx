@@ -43,7 +43,7 @@ function Login() {
       password
     }
     try{
-    const response = await axios.post('http://localhost:8080/blogs/auth/login', userData);
+    const response = await axios.post('/blogs/auth/login', userData);
       if (response.data) {
         localStorage.setItem('user', JSON.stringify(response.data))
       }
