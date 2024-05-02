@@ -59,11 +59,11 @@ const ShowOneBlog = () => {
         <div className='author'>
           <p><b>Created By: {blog.author}</b></p>
           {blog.user === userid ? <Link to={`/blogs/edit/${blog._id}`}><i className="fa-regular fa-pen-to-square fa-lg" style={{ color: 'black', margin: '0.5rem' }}></i></Link> : ' '}
-          {blog.user === userid ? <button style={{border: "none"}} onClick={handelDeletePost}><i className="fa-solid fa-trash fa-lg" style={{ color: 'black' }}></i></button> : ''}
+          {blog.user === userid ? <button style={{border: "none"}} onClick={handelDeletePost}><i className="fa-solid fa-trash fa-lg" style={{ color: 'black', backgroundColor: 'white' }}></i></button> : ''}
         </div>
       </div>
       <hr />
-      <CommentForm postId={id} />
+      {user ? <CommentForm postId={id} /> : ''}
       <hr />
       <GetCommentByPostId postId={id} />
     </>
